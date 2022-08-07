@@ -13,7 +13,7 @@ export SSHFS_LINK="https://github.com/libfuse/sshfs/releases/download/$SSHFS_VER
 pkg update -y
 pkg upgrade -y
 pkg install root-repo -y
-pkg install openssh python glib libfuse3 ninja wget coreutils tar sed termux-elf-cleaner -y
+pkg install openssh python glib libfuse3 ninja wget coreutils tar sed -y
 python -m pip install --upgrade pip
 pip install meson
 pip install docutils
@@ -33,7 +33,6 @@ fi
 ninja
 if [ -x ./sshfs ]
 then
-/data/data/com.termux/files/usr/bin/termux-elf-cleaner ./sshfs
 cp ./sshfs /data/data/com.termux/files/usr/bin/sshfs
 cd $HOME
 rm -r $HOME/$SSHFS_VERSION
