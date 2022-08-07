@@ -11,8 +11,7 @@ exit
 fi
 export HOME=/data/data/com.termux/files/home
 export PATH=/data/data/com.termux/files/usr/bin/:$PATH
-SSHFS_VERSION_LINK=$(curl -s https://github.com/libfuse/sshfs/releases/latest | cut -d'"' -f2 | cut -d'"' -f1)
-export SSHFS_VERSION=${SSHFS_VERSION_LINK##*/}
+export SSHFS_VERSION="sshfs-3.7.3"
 export SSHFS_VERSION_LITE=${SSHFS_VERSION##*-}
 SSHFS_SYSTEM_VERSION_FULL=$(/data/data/com.termux/files/usr/bin/sshfs -V)
 SSHFS_SYSTEM_VERSION_LITE=${SSHFS_SYSTEM_VERSION_FULL#*"SSHFS version "}
