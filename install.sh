@@ -44,7 +44,7 @@ fi
 pkg update -y
 pkg upgrade -y
 pkg install root-repo -y
-pkg install openssh python glib libfuse3 ninja wget coreutils tar sed termux-elf-cleaner -y
+pkg install openssh python glib libfuse3 ninja wget coreutils tar sed -y
 python -m pip install --upgrade pip
 pip install meson
 pip install docutils
@@ -67,7 +67,6 @@ cd $HOME
 rm -r $HOME/$SSHFS_VERSION
 if [ -x $HOME/sshfs ];
 then
-/data/data/com.termux/files/usr/bin/termux-elf-cleaner $HOME/sshfs
 echo "\n"
 while true; do
 read -p "Do you want to move sshfs to /data/data/com.termux/files/usr/bin/sshfs ? [Y/n] " yn
