@@ -85,12 +85,12 @@ rm -r --force /data/data/com.termux/files/usr/bin/sshfs-update
 fi
 if ! [ -e $HOME/termux-sshfs ]
 then
-git clone https://github.com/neiviv-ui/termux-sshfs $HOME/termux-sshfs
+git clone https://github.com/mkhattat/termux-sshfs $HOME/termux-sshfs
 fi
 if ! [ -e $HOME/termux-sshfs/sshfs-update ]
 then
 rm -r --force $HOME/termux-sshfs
-git clone https://github.com/neiviv-ui/termux-sshfs $HOME/termux-sshfs
+git clone https://github.com/mkhattat/termux-sshfs $HOME/termux-sshfs
 fi
 chmod +x $HOME/termux-sshfs/sshfs-update
 mv $HOME/termux-sshfs/sshfs-update /data/data/com.termux/files/usr/bin/sshfs-update
